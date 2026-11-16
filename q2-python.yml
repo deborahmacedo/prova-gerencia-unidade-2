@@ -1,0 +1,20 @@
+name: questao2
+
+
+on:
+  pull_request: 
+  types: [acepeted]
+    branches: [develop]
+
+jobs: 
+  testes:
+    runs-on: ubuntu-latest
+    steps: 
+      - uses: actions/checkout@v7
+      - usues: actions/setup-python@v7
+      with:
+        python-version: "3.12"
+        cache: pip
+        cache-dependy-path: requirements-dev.txt
+      - run: pip install -r requirements-dev.txt  
+      -run: pytest -v

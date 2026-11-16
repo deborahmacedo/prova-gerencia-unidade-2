@@ -1,0 +1,12 @@
+name: questao1
+
+on:
+  push:
+    branches: [feat/*]
+    path: [src/*, Docker/* ]
+
+ 
+    
+
+
+  
