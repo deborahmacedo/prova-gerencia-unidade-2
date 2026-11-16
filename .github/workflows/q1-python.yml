@@ -1,5 +1,9 @@
 name: Python
 
+on:
+  push:
+    branches: [feat/*]
+    paths: [src/*, Docker/* ]
 
 jobs:
   build:
