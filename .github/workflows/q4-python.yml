@@ -1,4 +1,4 @@
-name: questao4
+name: Python
 
 on: 
   workflow_dispatch
