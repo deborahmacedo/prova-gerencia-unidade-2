@@ -2,7 +2,7 @@ name: Python
 
 on:
   push:
-    branches: [feat/*]
+    branches: [feature/*]
     paths: [src/*, Docker/* ]
 
 jobs:
