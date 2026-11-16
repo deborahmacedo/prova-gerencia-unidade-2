@@ -1,5 +1,9 @@
 name: Python
 
+on:
+  pull_request:
+    types: [closed]
+    branches: develop
 
 jobs:
   build:
@@ -21,4 +25,11 @@ jobs:
 
       - name: Check
         run: python -m py_compile src/main.py
+
+      - name: tag   
+        if: !failure()
+        run: TAG="build-${{ github.run_id }}"
+
+
+    
 
